@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background: #020403;
+  --foreground: #ffffff;
+  --font-outfit: 'Outfit', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020403;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #031b14;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 255, 178, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 178, 0.3);
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(3, 27, 20, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 178, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 255, 178, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 255, 178, 0.06);
+}
+
+.glass-nav {
+  background: rgba(2, 4, 3, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 255, 178, 0.06);
+}
+
+/* Neon Glows */
+.neon-text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 178, 0.3), 0 0 20px rgba(0, 255, 178, 0.1);
+}
+
+.neon-btn-glow {
+  box-shadow: 0 0 15px rgba(0, 255, 178, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.neon-btn-glow:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 178, 0.45);
+  transform: translateY(-2px);
+}
+
+.neon-border-glow {
+  box-shadow: 0 0 15px rgba(0, 255, 178, 0.05);
+}
+
+.neon-border-glow:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 178, 0.15);
+}
+
+/* Dynamic Radial spotlight backgrounds */
+.radial-glow {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 255, 178, 0.12) 0%, transparent 50%);
+}
+
+.radial-bg-glow {
+  background: radial-gradient(circle at 50% 50%, #031b14 0%, #020403 70%);
+}
+
+/* Typography styles */
+.font-title {
+  font-family: var(--font-outfit);
+}
+
+/* Layout Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-neon {
+  background: linear-gradient(135deg, #ffffff 0%, #00ffb2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Orbit circular path animations */
+.orbit-ring {
+  border: 1px solid rgba(0, 255, 178, 0.08);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
